@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+
+
+     <head>
+
+            <style>
+            .i-box{type:text; background: yellow;border: none;}
+            .t-box{font-size: 20px;color: black;}
+            .s-box{width: 200px;height: 300px;background: burlywood;color:white;float: right;border-radius: 20px;}
+            .show{margin: 10px;}
+            .b-box{color:white;background:rgb(105, 71, 138);border-radius:10px;border: 1px rgb(255, 255, 255) solid;float:left;padding: 10px;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;}
+            </style>
+
+
+
+
+    </head>
+
+    <body>
+		
+        <div class="b-box">
+
+            <div>
+                <text>
+                    project name
+                </text>
+                <input type="text" id="put">
+                <text>
+                    project budget
+                </text>
+                <input type="number" id="put1">
+                <text>
+                    project time
+                </text>
+                <input type="date" id="put2">
+            </div><br>
+
+            <button  type="button" onclick="myfunction()">click here</button>
+
+
+
+        </div>
+
+        
+
+        <div class="show"></div>
+    
+
+		
+  
+   
+        <script>
+
+            faka=[];
+
+           function myfunction(){
+
+            var a = document.getElementById('put').value;
+            var b = document.getElementById('put1').value;
+            var c = document.getElementById('put2').value;
+
+            faka.push({projectname:a,projectbudget:b,projecttime:c,});
+
+            const sakku = `<div class="b-box">
+
+                        <h4>Project Name</h4>
+
+                        <h3>${faka[faka.length-1].projectname}</h3>
+
+
+
+                        <h4>Project Budget</h4>
+
+                        <h3>${faka[faka.length-1].projectbudget}</h3>
+
+
+                        <h4>Project Timeline</h4>
+
+                        <h3>${faka[faka.length-1].projecttime}</h3>
+
+
+                        </div>`;
+
+            document.querySelector(".show").innerHTML += sakku;
+
+                    
+          
+
+            
+
+
+           };
+
+			
+        
+
+  
+        </script>
+ 
+
+    </body>
